@@ -1,0 +1,2 @@
+{'mdtest-hard': {'api': 'POSIX', 'n': '100000', 'filesPerDir': ''}}
+{'mdtest-hard': {'api': 'MPIIO', 'n': '100000', 'filesPerDir': ''}}

@@ -1,0 +1,2 @@
+{'mdtest-easy': {'api': 'POSIX', 'n': '100000'}}
+{'mdtest-easy': {'api': 'MPIIO', 'n': '100000'}}

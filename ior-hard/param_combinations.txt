@@ -1,0 +1,4 @@
+{'ior-hard': {'api': 'POSIX', 'segmentCount': '100000', 'collective': 'True'}}
+{'ior-hard': {'api': 'POSIX', 'segmentCount': '100000', 'collective': 'False'}}
+{'ior-hard': {'api': 'MPIIO', 'segmentCount': '100000', 'collective': 'True'}}
+{'ior-hard': {'api': 'MPIIO', 'segmentCount': '100000', 'collective': 'False'}}

@@ -1,0 +1,2 @@
+./io500.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini.darshan _ 
+./io500.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini.darshan _ 

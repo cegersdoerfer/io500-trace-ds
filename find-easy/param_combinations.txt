@@ -1,0 +1,1 @@
+{'find-easy': {'nproc': '1', 'pfindQueueLength': '10000', 'pfindStealNext': 'False', 'pfindParallelize': 'False'}}
