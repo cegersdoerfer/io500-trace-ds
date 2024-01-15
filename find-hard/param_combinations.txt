@@ -1,1 +1,3 @@
-{'find-hard': {'nproc': '1', 'pfindQueueLength': '10000', 'pfindStealNext': 'False', 'pfindParallelize': 'False'}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8102c292e192b7f7ebf43b3a6bc01cc79d6ee1bd39bbb7f7366ab511a60ad88
+size 115

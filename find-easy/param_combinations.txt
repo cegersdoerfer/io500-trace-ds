@@ -1,1 +1,3 @@
-{'find-easy': {'nproc': '1', 'pfindQueueLength': '10000', 'pfindStealNext': 'False', 'pfindParallelize': 'False'}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0950515bd1b820a76efa74de7449e8347e57fd28d65c9b41f54797591e7347e0
+size 115
