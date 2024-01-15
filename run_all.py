@@ -2,9 +2,10 @@ import os
 import sys
 import subprocess
 
-runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB',
-                    'mdworkbench', 'find-easy', 'find', 'find-hard',
-                    'mdtest-easy', 'mdtest-hard']
+# runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB',
+                   # 'mdworkbench', 'find-easy', 'find', 'find-hard',
+                   # 'mdtest-easy', 'mdtest-hard']
+runable_sections = ['mdtest-hard']
 
 # cd to all the directories and run commands in the run_commands.txt file
 for section in runable_sections:
