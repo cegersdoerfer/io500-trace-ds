@@ -1,2 +1,3 @@
-{'ior-rnd1MB': {'api': 'POSIX', 'blockSize': '1073741824', 'randomPrefill': '0'}}
-{'ior-rnd1MB': {'api': 'MPIIO', 'blockSize': '1073741824', 'randomPrefill': '0'}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e80885c3eef63bea1be565d4bcf27a719ba323f43e93f6935e0df633c6144753
+size 164

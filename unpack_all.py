@@ -16,6 +16,17 @@ def unpack_all():
         # create Darshan_logs_txt folder if it does not exist
         if not os.path.exists(folder + '/Darshan_logs_txt'):
             os.makedirs(folder + '/Darshan_logs_txt')
+        else:
+            print("Darshan_logs_txt folder already exists in " + folder)
+            # move contents of Darshan_logs_txt folder to Darshan_logs_txt_old
+            if not os.path.exists(folder + '/Darshan_logs_txt_old'):
+                os.makedirs(folder + '/Darshan_logs_txt_old')
+            else:
+                print("Darshan_logs_txt_old folder already exists in " + folder)
+        
+            for darshan_log_txt in os.listdir(folder + '/Darshan_logs_txt'):
+                os.rename(os.path.join(folder + '/Darshan_logs_txt', darshan_log_txt), os.path.join(folder + '/Darshan_logs_txt_old', darshan_log_txt))
+        # unpack each file
         for darshan_log in darshan_logs:
             # unpack each file
             print("Unpacking " + darshan_log)
