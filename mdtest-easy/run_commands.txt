@@ -1,2 +1,1 @@
-./io500.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini.darshan _ 
 ./io500.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini.darshan _ 
