@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a91f654416f47abcc540c89ee0d8b23f90dfc9938fbec1d9b00b2ae72d9dc235
-size 318
+./io500.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini.darshan _ 
+./io500.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini.darshan _ 

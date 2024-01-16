@@ -9,6 +9,8 @@ runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB',
                     'mdworkbench', 'find-easy', 'find', 'find-hard', 
                     'mdtest-easy', 'mdtest-hard']
 
+#runable_sections = ['mdtest-easy']
+
 def delete_all_existing_ini_files(section):
     os.chdir(section)
     for file in os.listdir():
