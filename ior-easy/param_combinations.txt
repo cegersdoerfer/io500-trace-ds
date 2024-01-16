@@ -1,4 +1,3 @@
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'False', 'uniqueDir': 'True'}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8875fb5df95ce5bd9be3c476e41f551f760c0b1b9e283874799f220852d1e6bf
+size 500
