@@ -30,7 +30,10 @@ def unpack_all():
         for txt_log in txt_logs:
             if txt_log.endswith('.json'):
                 # remove json files
-                os.remove(os.path.join(folder + '/Darshan_logs_txt', txt_log))
+                try:
+                    os.remove(os.path.join(folder + '/Darshan_logs_txt', txt_log))
+                except:
+                    continue
         # unpack each file
         
         for darshan_log in darshan_logs:
