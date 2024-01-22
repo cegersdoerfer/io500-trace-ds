@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22c98588b1ff1c836a1bdd638742dcdb2a7258264b281a9d3150d194166e1094
-size 283
+./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini_0.darshan _ 
+./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini_1.darshan _ 
+./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini_2.darshan _ 
+./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini_0.darshan _ 
+./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini_1.darshan _ 
+./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini_2.darshan _ 

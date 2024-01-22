@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aab11d04e46adcb561fa6a44630ac83b87367c087b98f3f885bc8ea22cdf15be
-size 283
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_MPIIO_segmentCount_100000_collective_False_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_MPIIO_segmentCount_100000_collective_False_.ini_0.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_MPIIO_segmentCount_100000_collective_False_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_MPIIO_segmentCount_100000_collective_False_.ini_1.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_MPIIO_segmentCount_100000_collective_False_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_MPIIO_segmentCount_100000_collective_False_.ini_2.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_MPIIO_segmentCount_100000_collective_True_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_MPIIO_segmentCount_100000_collective_True_.ini_0.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_MPIIO_segmentCount_100000_collective_True_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_MPIIO_segmentCount_100000_collective_True_.ini_1.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_MPIIO_segmentCount_100000_collective_True_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_MPIIO_segmentCount_100000_collective_True_.ini_2.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_POSIX_segmentCount_100000_collective_False_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_POSIX_segmentCount_100000_collective_False_.ini_0.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_POSIX_segmentCount_100000_collective_False_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_POSIX_segmentCount_100000_collective_False_.ini_1.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_POSIX_segmentCount_100000_collective_False_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_POSIX_segmentCount_100000_collective_False_.ini_2.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_POSIX_segmentCount_100000_collective_True_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_POSIX_segmentCount_100000_collective_True_.ini_0.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_POSIX_segmentCount_100000_collective_True_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_POSIX_segmentCount_100000_collective_True_.ini_1.darshan _ 
+./io500_ds.sh Trace_Dataset/ior-hard/ior-hard_api_POSIX_segmentCount_100000_collective_True_.ini Trace_Dataset/ior-hard/Darshan_logs/ior-hard_api_POSIX_segmentCount_100000_collective_True_.ini_2.darshan _ 
