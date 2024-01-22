@@ -83,7 +83,7 @@ def parse_darshan_txt(txt_output):
     return df, trace_start_time, full_runtime
 
 # Load the uploaded log file
-file_path = '/mnt/data/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0_.txt'
+file_path = 'labelled-issues/random-access/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0_.txt'
 with open(file_path, 'r') as file:
     log_content = file.read()
 
@@ -117,6 +117,22 @@ def detect_reread_fullsize_reads(df):
         re_read_issues[file_id] = total_read_size > actual_file_size
 
     return re_read_issues
+
+def detect_inefficient_reads(df):
+    inefficient_read_issues = {}
+    for file_id in df['file_id'].unique():
+        file_data = df[df['file_id'] == file_id]
+        # Determine the maximum write offset for the file
+        max_write_offset = file_data[file_data['operation'] == 'write']['offset'].max()
+
+        # Analyze read operations
+        read_operations = file_data[file_data['operation'] == 'read']
+        read_beyond_write = any((read_operations['offset'] + read_operations['size']) > max_write_offset)
+        repeated_reads = read_operations.duplicated(subset=['offset', 'size'], keep=False).any()
+
+        inefficient_read_issues[file_id] = read_beyond_write or repeated_reads
+
+    return inefficient_read_issues
 
 
 # Additional analysis functions
@@ -178,8 +194,23 @@ io_balance_issues = check_io_balance(df)
 metadata_time_issues = evaluate_metadata_time(df)
 stdio_usage_issues = analyze_stdio_usage(df)
 small_io_issues = detect_small_io(df)
-re_read_issues = detect_reread_fullsize_reads(df)
+re_read_issues = detect_inefficient_reads(df)
 
+# Displaying the results
+print("Stripe misalignment issues:")
+print(stripe_misalignment_issues)
+print("Spatiality issues:")
+print(spatiality_issues)
+print("I/O balance issues:")
+print(io_balance_issues)
+print("Metadata time issues:")
+print(metadata_time_issues)
+print("STDIO usage issues:")
+print(stdio_usage_issues)
+print("Small I/O issues:")
+print(small_io_issues)
+print("Re-read issues:")
+print(re_read_issues)
 
 
 

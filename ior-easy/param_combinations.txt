@@ -1,24 +1,3 @@
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '2K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '2K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4MB', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4MB', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '8MB', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '8MB', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '2K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '2K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4MB', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4MB', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '8MB', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '8MB', 'filePerProc': 'False', 'uniqueDir': 'True'}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e63990671a6cb9b1088e3c3c8157177769e2dbe5165b4670f0c358c4ce76239c
+size 3004

@@ -1,0 +1,15 @@
+,none-induced,small-io,random-access,small-io-shared,non-collective-io,misaligned-io
+ior-easy_api_MPIIO_blockSize_1073741824_transferSize_1M_filePerProc_False_uniqueDir_True_.txt,True,False,False,False,False,False
+ior-easy_api_POSIX_blockSize_1073741824_transferSize_1M_filePerProc_False_uniqueDir_True_.txt,True,False,False,False,False,False
+ior-hard_api_MPIIO_segmentCount_100000_collective_True_.txt,False,True,False,False,False,True
+ior-easy_api_MPIIO_blockSize_1073741824_transferSize_4K_filePerProc_False_uniqueDir_True_.txt,False,True,False,False,False,False
+ior-hard_api_MPIIO_segmentCount_100000_collective_False_.txt,False,True,False,False,True,True
+ior-rnd4K_api_MPIIO_blockSize_1073741824_randomPrefill_0_.txt,False,True,True,False,False,False
+ior-hard_api_POSIX_segmentCount_100000_collective_True_.txt,False,True,False,False,False,True
+ior-rnd4K_api_POSIX_blockSize_1073741824_randomPrefill_0_.txt,False,True,True,False,False,False
+ior-easy_api_POSIX_blockSize_1073741824_transferSize_4K_filePerProc_False_uniqueDir_True_.txt,False,True,False,False,False,False
+ior-hard_api_POSIX_segmentCount_100000_collective_False_.txt,False,True,False,False,True,True
+ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0_.txt,False,False,True,False,False,False
+ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0_.txt,False,False,True,False,False,False
+mdtest-easy_api_POSIX_n_100000_.txt,False,False,False,True,False,False
+mdtest-hard_api_POSIX_n_100000_filesPerDir__.txt,False,False,False,True,False,False
