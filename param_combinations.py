@@ -4,8 +4,8 @@ import itertools
 # Define the ranges for each parameter
 api_values = ['POSIX', 'MPIIO']
 block_size_values = ['1073741824']
-transfer_size_values = ['4K', '1M']
-file_per_proc_values = ['False']#["True", "False"]
+transfer_size_values = ['2K', '4K', '512K', '1M', '4MB', '8MB']
+file_per_proc_values = ["True", "False"]
 unique_dir_values = ["True"]#["True", "False"]
 random_prefill_values = ['0']#['0', '1024']
 n_values = ['100000']

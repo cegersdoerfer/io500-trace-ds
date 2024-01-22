@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c54a72983e09938f297814786871a8e94b61cd44a3fdef97f8251afa819ca5e4
-size 318
+{'ior-hard': {'api': 'POSIX', 'segmentCount': '100000', 'collective': 'True'}}
+{'ior-hard': {'api': 'POSIX', 'segmentCount': '100000', 'collective': 'False'}}
+{'ior-hard': {'api': 'MPIIO', 'segmentCount': '100000', 'collective': 'True'}}
+{'ior-hard': {'api': 'MPIIO', 'segmentCount': '100000', 'collective': 'False'}}
