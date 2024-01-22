@@ -46,5 +46,5 @@ if __name__ == '__main__':
         with open(f'{section}/run_commands.txt', 'w') as f:
             for file in os.listdir(section):
                 if file.endswith('.ini'):
-                    f.write(f'./io500.sh Trace_Dataset/{section}/{file} Trace_Dataset/{section}/Darshan_logs/{file}.darshan _ \n')
+                    f.write(f'./io500_ds.sh Trace_Dataset/{section}/{file} Trace_Dataset/{section}/Darshan_logs/{file}.darshan _ \n')
 
