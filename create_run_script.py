@@ -9,6 +9,8 @@ runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB',
                     'mdworkbench', 'find-easy', 'find', 'find-hard', 
                     'mdtest-easy', 'mdtest-hard']
 
+repetitions = 3
+
 #runable_sections = ['mdtest-easy']
 
 def delete_all_existing_ini_files(section):
@@ -46,5 +48,6 @@ if __name__ == '__main__':
         with open(f'{section}/run_commands.txt', 'w') as f:
             for file in os.listdir(section):
                 if file.endswith('.ini'):
-                    f.write(f'./io500_ds.sh Trace_Dataset/{section}/{file} Trace_Dataset/{section}/Darshan_logs/{file}.darshan _ \n')
+                    for i in range(repetitions):
+                        f.write(f'./io500_ds.sh Trace_Dataset/{section}/{file} Trace_Dataset/{section}/Darshan_logs/{file}_{i}.darshan _ \n')
 
