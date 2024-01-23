@@ -79,5 +79,6 @@ for section in runable_sections:
             rpc_stats = parse_rpc_stats(output)
             print(rpc_stats)
             save_to_json(line.split(' ')[2]+'_results.json', rpc_stats)
+            subprocess.call('lctl set_param ldlm.namespaces.*.lru_size=clear', shell=True)
 
     os.chdir('Trace_Dataset')

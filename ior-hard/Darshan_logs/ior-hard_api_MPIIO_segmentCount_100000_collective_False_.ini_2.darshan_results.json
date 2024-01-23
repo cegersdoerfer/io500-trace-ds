@@ -2,13 +2,109 @@
     "IOLustre-OST0000-osc-ffff93d6da79d000": {
         "1": {
             "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
+                "count": 44,
+                "percent": 97.0,
+                "cumulative_percent": 97.0
             },
             "write": {
-                "count": 2,
+                "count": 4,
                 "percent": 100.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "2": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "4": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "8": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "16": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "32": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "64": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "128": {
+            "read": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 97.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            }
+        },
+        "256": {
+            "read": {
+                "count": 1,
+                "percent": 2.0,
+                "cumulative_percent": 100.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
                 "cumulative_percent": 100.0
             }
         }
@@ -16,133 +112,13 @@
     "IOLustre-OST0001-osc-ffff93d6da79d000": {
         "1": {
             "read": {
-                "count": 464654,
-                "percent": 75.0,
-                "cumulative_percent": 75.0
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
             },
             "write": {
                 "count": 3,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "2": {
-            "read": {
-                "count": 45198,
-                "percent": 7.0,
-                "cumulative_percent": 83.0
-            },
-            "write": {
-                "count": 1,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "4": {
-            "read": {
-                "count": 18684,
-                "percent": 3.0,
-                "cumulative_percent": 86.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "8": {
-            "read": {
-                "count": 42231,
-                "percent": 6.0,
-                "cumulative_percent": 93.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "16": {
-            "read": {
-                "count": 910,
-                "percent": 0.0,
-                "cumulative_percent": 93.0
-            },
-            "write": {
-                "count": 1,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "32": {
-            "read": {
-                "count": 4492,
-                "percent": 0.0,
-                "cumulative_percent": 94.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "64": {
-            "read": {
-                "count": 8981,
-                "percent": 1.0,
-                "cumulative_percent": 95.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "128": {
-            "read": {
-                "count": 21994,
-                "percent": 3.0,
-                "cumulative_percent": 99.0
-            },
-            "write": {
-                "count": 7,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            }
-        },
-        "256": {
-            "read": {
-                "count": 1796,
-                "percent": 0.0,
-                "cumulative_percent": 99.0
-            },
-            "write": {
-                "count": 77,
-                "percent": 1.0,
-                "cumulative_percent": 1.0
-            }
-        },
-        "512": {
-            "read": {
-                "count": 2220,
-                "percent": 0.0,
-                "cumulative_percent": 99.0
-            },
-            "write": {
-                "count": 74,
-                "percent": 1.0,
-                "cumulative_percent": 3.0
-            }
-        },
-        "1024": {
-            "read": {
-                "count": 930,
-                "percent": 0.0,
-                "cumulative_percent": 100.0
-            },
-            "write": {
-                "count": 4838,
-                "percent": 96.0,
+                "percent": 100.0,
                 "cumulative_percent": 100.0
             }
         }
@@ -155,21 +131,9 @@
                 "cumulative_percent": 0.0
             },
             "write": {
-                "count": 5,
-                "percent": 71.0,
-                "cumulative_percent": 71.0
-            }
-        },
-        "2": {
-            "read": {
                 "count": 0,
                 "percent": 0.0,
                 "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 2,
-                "percent": 28.0,
-                "cumulative_percent": 100.0
             }
         }
     },
@@ -181,68 +145,8 @@
                 "cumulative_percent": 0.0
             },
             "write": {
-                "count": 3,
-                "percent": 75.0,
-                "cumulative_percent": 75.0
-            }
-        },
-        "2": {
-            "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 75.0
-            }
-        },
-        "4": {
-            "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 75.0
-            }
-        },
-        "8": {
-            "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 75.0
-            }
-        },
-        "16": {
-            "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 75.0
-            }
-        },
-        "32": {
-            "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 1,
-                "percent": 25.0,
+                "count": 2,
+                "percent": 100.0,
                 "cumulative_percent": 100.0
             }
         }
@@ -250,13 +154,133 @@
     "IOLustre-OST0004-osc-ffff93d6da79d000": {
         "1": {
             "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
+                "count": 437484,
+                "percent": 74.0,
+                "cumulative_percent": 74.0
             },
             "write": {
                 "count": 1,
-                "percent": 100.0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "2": {
+            "read": {
+                "count": 47095,
+                "percent": 8.0,
+                "cumulative_percent": 82.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "4": {
+            "read": {
+                "count": 18763,
+                "percent": 3.0,
+                "cumulative_percent": 85.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "8": {
+            "read": {
+                "count": 42365,
+                "percent": 7.0,
+                "cumulative_percent": 92.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "16": {
+            "read": {
+                "count": 748,
+                "percent": 0.0,
+                "cumulative_percent": 93.0
+            },
+            "write": {
+                "count": 1,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "32": {
+            "read": {
+                "count": 4586,
+                "percent": 0.0,
+                "cumulative_percent": 93.0
+            },
+            "write": {
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "64": {
+            "read": {
+                "count": 8991,
+                "percent": 1.0,
+                "cumulative_percent": 95.0
+            },
+            "write": {
+                "count": 4,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "128": {
+            "read": {
+                "count": 22010,
+                "percent": 3.0,
+                "cumulative_percent": 99.0
+            },
+            "write": {
+                "count": 13,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
+            }
+        },
+        "256": {
+            "read": {
+                "count": 1972,
+                "percent": 0.0,
+                "cumulative_percent": 99.0
+            },
+            "write": {
+                "count": 110,
+                "percent": 2.0,
+                "cumulative_percent": 2.0
+            }
+        },
+        "512": {
+            "read": {
+                "count": 2132,
+                "percent": 0.0,
+                "cumulative_percent": 99.0
+            },
+            "write": {
+                "count": 84,
+                "percent": 1.0,
+                "cumulative_percent": 4.0
+            }
+        },
+        "1024": {
+            "read": {
+                "count": 938,
+                "percent": 0.0,
+                "cumulative_percent": 100.0
+            },
+            "write": {
+                "count": 4827,
+                "percent": 95.0,
                 "cumulative_percent": 100.0
             }
         }
@@ -269,9 +293,9 @@
                 "cumulative_percent": 0.0
             },
             "write": {
-                "count": 2,
-                "percent": 66.0,
-                "cumulative_percent": 66.0
+                "count": 0,
+                "percent": 0.0,
+                "cumulative_percent": 0.0
             }
         },
         "2": {
@@ -281,20 +305,8 @@
                 "cumulative_percent": 0.0
             },
             "write": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 66.0
-            }
-        },
-        "4": {
-            "read": {
-                "count": 0,
-                "percent": 0.0,
-                "cumulative_percent": 0.0
-            },
-            "write": {
-                "count": 1,
-                "percent": 33.0,
+                "count": 2,
+                "percent": 100.0,
                 "cumulative_percent": 100.0
             }
         }
