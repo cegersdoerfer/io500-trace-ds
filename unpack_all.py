@@ -19,14 +19,13 @@ def unpack_all():
             os.makedirs(folder + '/Darshan_logs_txt')
         else:
             print("Darshan_logs_txt folder already exists in " + folder)
-            # move contents of Darshan_logs_txt folder to Darshan_logs_txt_old
-            if not os.path.exists(folder + '/Darshan_logs_txt_old'):
-                os.makedirs(folder + '/Darshan_logs_txt_old')
-            else:
-                print("Darshan_logs_txt_old folder already exists in " + folder)
-        
-            for darshan_log_txt in os.listdir(folder + '/Darshan_logs_txt'):
-                os.rename(os.path.join(folder + '/Darshan_logs_txt', darshan_log_txt), os.path.join(folder + '/Darshan_logs_txt_old', darshan_log_txt))
+            # remove contents of Darshan_logs_txt folder
+            for log in txt_logs:
+                try:
+                    os.remove(os.path.join(folder + '/Darshan_logs_txt', log))
+                except:
+                    continue
+                    
         for txt_log in txt_logs:
             if txt_log.endswith('.json'):
                 # remove json files
