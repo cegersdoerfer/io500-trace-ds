@@ -36,7 +36,7 @@ if __name__ == '__main__':
             combinations = f.readlines()
             for combination in combinations:
                 # create new congig file
-                subprocess.call(['python3', 'create_config.py', '--enable', section, '--params', combination, '--file', 'config-all.ini'])
+                subprocess.call(['python3', 'create_config.py', '--enable', section, '--params', combination, '--file', 'config-all.ini', '--repititions', str(repetitions)])
 
     for section in runable_sections:
         if not os.path.isdir(f'{section}/Darshan_logs'):
@@ -48,6 +48,5 @@ if __name__ == '__main__':
         with open(f'{section}/run_commands.txt', 'w') as f:
             for file in os.listdir(section):
                 if file.endswith('.ini'):
-                    for i in range(repetitions):
-                        f.write(f'./io500_ds.sh Trace_Dataset/{section}/{file} Trace_Dataset/{section}/Darshan_logs/{file}_{i}.darshan _ \n')
+                    f.write(f'./io500_ds.sh Trace_Dataset/{section}/{file} Trace_Dataset/{section}/Darshan_logs/{file}.darshan _ \n')
 
