@@ -1,6 +1,3 @@
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini_0.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini_1.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir__.ini_2.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini_0.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini_1.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir__.ini_2.darshan _ 
+version https://git-lfs.github.com/spec/v1
+oid sha256:085b8ab8c63baf36c09bdf5c63467f2081d9b64fb10fb7eeca25bc63d18bdc7f
+size 1140

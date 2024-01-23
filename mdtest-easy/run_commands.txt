@@ -1,6 +1,3 @@
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini_0.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini_1.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000_.ini_2.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini_0.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini_1.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000_.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000_.ini_2.darshan _ 
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ac3b32d54480a625a029ab847d7d7015e509d46715a4c952f5a56ad0be3bc3e
+size 984
