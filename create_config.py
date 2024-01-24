@@ -52,7 +52,7 @@ def main():
 
     for idx in range(args.repititions):
         config = read_ini_file(args.file)
-        update_config_sections(config, args.enable, args.params if args.params else {})
+        update_config_sections(config, args.enable, args.params if args.params else {}, idx)
         # convert list of enabled sections to a string
         enabled_sections = '_'.join(args.enable)
         # check if dir named enabled_sections exists

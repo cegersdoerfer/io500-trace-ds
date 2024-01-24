@@ -2,8 +2,6 @@
 {'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '2K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'True', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'False', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'POSIX', 'blockSize': '1073741824', 'transferSize': '4MB', 'filePerProc': 'True', 'uniqueDir': 'True'}}
@@ -14,8 +12,6 @@
 {'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '2K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'True', 'uniqueDir': 'True'}}
-{'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '512K', 'filePerProc': 'False', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'True', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '1M', 'filePerProc': 'False', 'uniqueDir': 'True'}}
 {'ior-easy': {'api': 'MPIIO', 'blockSize': '1073741824', 'transferSize': '4MB', 'filePerProc': 'True', 'uniqueDir': 'True'}}
