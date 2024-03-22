@@ -1,2 +1,3 @@
-{'mdtest-easy': {'api': 'POSIX', 'n': '100000'}}
-{'mdtest-easy': {'api': 'MPIIO', 'n': '100000'}}
+version https://git-lfs.github.com/spec/v1
+oid sha256:201d9e18f4161174135da20712909e308994069856b2a8920b8ecc8c19dd1bb5
+size 98
