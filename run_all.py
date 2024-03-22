@@ -61,8 +61,7 @@ def save_to_json(filename, data):
         json.dump(data, file, indent=4)
 
 runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB',
-                   'mdworkbench', 'find-easy', 'find', 'find-hard',
-                   'mdtest-easy', 'mdtest-hard']
+                   'mdworkbench', 'find-easy', 'find', 'find-hard', 'mdtest-easy', 'mdtest-hard']
 #runable_sections = ['mdtest-easy']
 
 # cd to all the directories and run commands in the run_commands.txt file
