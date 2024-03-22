@@ -61,7 +61,7 @@ def save_to_json(filename, data):
         json.dump(data, file, indent=4)
 
 runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB',
-                   'mdworkbench', 'find-easy', 'find', 'find-hard', 'mdtest-easy', 'mdtest-hard']
+                   'mdworkbench']
 #runable_sections = ['mdtest-easy']
 
 # cd to all the directories and run commands in the run_commands.txt file
@@ -75,9 +75,9 @@ for section in runable_sections:
             print('\t running ' + line)
             subprocess.call(line, shell=True)
             output = subprocess.check_output(['lctl', 'get_param', 'osc.IOLustre*.rpc_stats'], text=True)
-            rpc_stats = parse_rpc_stats(output)
-            print(rpc_stats)
-            save_to_json(line.split(' ')[2]+'_results.json', rpc_stats)
-            subprocess.call('lctl set_param ldlm.namespaces.*.lru_size=clear', shell=True)
+            #rpc_stats = parse_rpc_stats(output)
+            #print(rpc_stats)
+            #save_to_json(line.split(' ')[2]+'_results.json', rpc_stats)
+            #subprocess.call('lctl set_param ldlm.namespaces.*.lru_size=clear', shell=True)
 
     os.chdir('Trace_Dataset')
