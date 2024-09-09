@@ -40,8 +40,8 @@ def unpack_all():
                 continue
             # unpack each file
             print("Unpacking " + darshan_log)
-            print("darshan-dxt-parser --show-incomplete " + os.path.join(folder, 'Darshan_logs', darshan_log) + " > " + os.path.join(folder, 'Darshan_logs_txt', darshan_log.replace('.ini.darshan', '.txt')))
-            subprocess.call("darshan-dxt-parser --show-incomplete " + os.path.join(folder, 'Darshan_logs', darshan_log) + " > " + os.path.join(folder, 'Darshan_logs_txt', darshan_log.replace('.ini.darshan', '.txt')), shell=True)
+            print("darshan-parser --show-incomplete " + os.path.join(folder, 'Darshan_logs', darshan_log) + " > " + os.path.join(folder, 'Darshan_logs_txt', darshan_log.replace('.ini.darshan', '.txt')))
+            subprocess.call("darshan-parser --show-incomplete " + os.path.join(folder, 'Darshan_logs', darshan_log) + " > " + os.path.join(folder, 'Darshan_logs_txt', darshan_log.replace('.ini.darshan', '.txt')), shell=True)
         
 
 if __name__ == '__main__':
