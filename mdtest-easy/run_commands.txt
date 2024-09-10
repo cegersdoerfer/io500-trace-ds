@@ -1,6 +1,2 @@
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__1.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000__1.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000__2.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000__2.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000__1.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000__1.ini.darshan _ 
 ./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_POSIX_n_100000__0.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_POSIX_n_100000__0.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__2.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000__2.ini.darshan _ 
 ./io500_ds.sh Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini Trace_Dataset/mdtest-easy/Darshan_logs/mdtest-easy_api_MPIIO_n_100000__0.ini.darshan _ 

@@ -5,11 +5,11 @@ import os
 import glob
 import subprocess
 
-runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB', 
-                    'mdworkbench', 'find-easy', 'find', 'find-hard', 
-                    'mdtest-easy', 'mdtest-hard']
+#runable_sections = ['ior-easy', 'ior-hard', 'ior-rnd4K', 'ior-rnd1MB', 'mdtest-easy', 'mdtest-hard']
 
-repetitions = 3
+runable_sections = ['ior-rnd1MB']
+
+repetitions = 1
 
 #runable_sections = ['mdtest-easy']
 
@@ -35,6 +35,7 @@ if __name__ == '__main__':
         with open(f"{section}/param_combinations.txt", "r") as f:
             combinations = f.readlines()
             for combination in combinations:
+                print(combination)
                 # create new congig file
                 subprocess.call(['python3', 'create_config.py', '--enable', section, '--params', combination, '--file', 'config-all.ini', '--repititions', str(repetitions)])
 

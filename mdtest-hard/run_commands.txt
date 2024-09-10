@@ -1,6 +1,2 @@
 ./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir___0.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir___0.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir___2.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir___2.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir___2.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir___2.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir___1.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir___1.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_POSIX_n_100000_filesPerDir___1.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_POSIX_n_100000_filesPerDir___1.ini.darshan _ 
 ./io500_ds.sh Trace_Dataset/mdtest-hard/mdtest-hard_api_MPIIO_n_100000_filesPerDir___0.ini Trace_Dataset/mdtest-hard/Darshan_logs/mdtest-hard_api_MPIIO_n_100000_filesPerDir___0.ini.darshan _ 

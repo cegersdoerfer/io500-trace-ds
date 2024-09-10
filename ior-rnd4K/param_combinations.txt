@@ -1,2 +1,2 @@
-{'ior-rnd4K': {'api': 'POSIX', 'blockSize': '1073741824', 'randomPrefill': '0'}}
-{'ior-rnd4K': {'api': 'MPIIO', 'blockSize': '1073741824', 'randomPrefill': '0'}}
+{'ior-rnd4K': {'api': 'POSIX', 'blockSize': '1GB', 'randomPrefill': '0'}}
+{'ior-rnd4K': {'api': 'MPIIO', 'blockSize': '1GB', 'randomPrefill': '0'}}

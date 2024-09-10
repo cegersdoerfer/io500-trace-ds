@@ -1,6 +1,2 @@
-./io500_ds.sh Trace_Dataset/ior-rnd1MB/ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0__2.ini Trace_Dataset/ior-rnd1MB/Darshan_logs/ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0__2.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/ior-rnd1MB/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0__2.ini Trace_Dataset/ior-rnd1MB/Darshan_logs/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0__2.ini.darshan _ 
 ./io500_ds.sh Trace_Dataset/ior-rnd1MB/ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0__0.ini Trace_Dataset/ior-rnd1MB/Darshan_logs/ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0__0.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/ior-rnd1MB/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0__1.ini Trace_Dataset/ior-rnd1MB/Darshan_logs/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0__1.ini.darshan _ 
-./io500_ds.sh Trace_Dataset/ior-rnd1MB/ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0__1.ini Trace_Dataset/ior-rnd1MB/Darshan_logs/ior-rnd1MB_api_POSIX_blockSize_1073741824_randomPrefill_0__1.ini.darshan _ 
 ./io500_ds.sh Trace_Dataset/ior-rnd1MB/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0__0.ini Trace_Dataset/ior-rnd1MB/Darshan_logs/ior-rnd1MB_api_MPIIO_blockSize_1073741824_randomPrefill_0__0.ini.darshan _ 

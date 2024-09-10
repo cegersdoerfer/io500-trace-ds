@@ -4,7 +4,7 @@ import itertools
 # Define the ranges for each parameter
 api_values = ['POSIX', 'MPIIO']
 block_size_values = ['1073741824']
-transfer_size_values = ['2K', '4K', '1M', '4MB', '8MB']
+transfer_size_values = ['2K', '4K', '1MB', '4MB']
 file_per_proc_values = ["True", "False"]
 unique_dir_values = ["True"]#["True", "False"]
 random_prefill_values = ['0']#['0', '1024']
@@ -95,6 +95,10 @@ def main():
         print(f"Combinations for {selected_section}:")
         with open(f"{selected_section}/param_combinations.txt", "w") as file:
        	    for combo in section_combinations[selected_section]:
+                print(combo)
+                if selected_section == 'ior-easy':
+                    if combo[selected_section]['api'] == 'MPIIO' and combo[selected_section]['filePerProc'] == 'True':
+                        continue
                 file.write(f"{combo}\n")
     else:
         print(f"Section '{selected_section}' not found.")

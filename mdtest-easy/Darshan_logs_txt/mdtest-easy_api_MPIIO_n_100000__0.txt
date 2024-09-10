@@ -1,0 +1,805 @@
+# darshan log version: 3.41
+# compression method: ZLIB
+# exe: /mnt/IOLustre/io500/io500
+# uid: 0
+# jobid: 104393
+# start_time: 1725938013
+# start_time_asci: Mon Sep  9 23:13:33 2024
+# end_time: 1725938013
+# end_time_asci: Mon Sep  9 23:13:33 2024
+# nprocs: 4
+# run time: 0.0238
+# metadata: lib_ver = 3.4.4
+# metadata: h = romio_no_indep_rw=true;cb_nodes=4
+
+# log file regions
+# -------------------------------------------------------
+# header: 9520 bytes (uncompressed)
+# job data: 114 bytes (compressed)
+# record table: 552 bytes (compressed)
+# POSIX module: 304 bytes (compressed), ver=4
+# LUSTRE module: 90 bytes (compressed), ver=1
+# STDIO module: 411 bytes (compressed), ver=2
+# HEATMAP module: 159 bytes (compressed), ver=1
+
+# mounted file systems (mount point and fs type)
+# -------------------------------------------------------
+
+# description of columns:
+#   <module>: module responsible for this I/O record.
+#   <rank>: MPI rank.  -1 indicates that the file is shared
+#      across all processes and statistics are aggregated.
+#   <record id>: hash of the record's file path
+#   <counter name> and <counter value>: statistical counters.
+#      A value of -1 indicates that Darshan could not monitor
+#      that counter, and its value should be ignored.
+#   <file name>: full file path for the record.
+#   <mount pt>: mount point that the file resides on.
+#   <fs type>: type of file system that the file resides on.
+
+# *******************************************************
+# POSIX module data
+# *******************************************************
+
+# description of POSIX counters:
+#   POSIX_*: posix operation counts.
+#   READS,WRITES,OPENS,SEEKS,STATS,MMAPS,SYNCS,FILENOS,DUPS are types of operations.
+#   POSIX_RENAME_SOURCES/TARGETS: total count file was source or target of a rename operation
+#   POSIX_RENAMED_FROM: Darshan record ID of the first rename source, if file was a rename target
+#   POSIX_MODE: mode that file was opened in.
+#   POSIX_BYTES_*: total bytes read and written.
+#   POSIX_MAX_BYTE_*: highest offset byte read and written.
+#   POSIX_CONSEC_*: number of exactly adjacent reads and writes.
+#   POSIX_SEQ_*: number of reads and writes from increasing offsets.
+#   POSIX_RW_SWITCHES: number of times access alternated between read and write.
+#   POSIX_*_ALIGNMENT: memory and file alignment.
+#   POSIX_*_NOT_ALIGNED: number of reads and writes that were not aligned.
+#   POSIX_MAX_*_TIME_SIZE: size of the slowest read and write operations.
+#   POSIX_SIZE_*_*: histogram of read and write access sizes.
+#   POSIX_STRIDE*_STRIDE: the four most common strides detected.
+#   POSIX_STRIDE*_COUNT: count of the four most common strides.
+#   POSIX_ACCESS*_ACCESS: the four most common access sizes.
+#   POSIX_ACCESS*_COUNT: count of the four most common access sizes.
+#   POSIX_*_RANK: rank of the processes that were the fastest and slowest at I/O (for shared files).
+#   POSIX_*_RANK_BYTES: bytes transferred by the fastest and slowest ranks (for shared files).
+#   POSIX_F_*_START_TIMESTAMP: timestamp of first open/read/write/close.
+#   POSIX_F_*_END_TIMESTAMP: timestamp of last open/read/write/close.
+#   POSIX_F_READ/WRITE/META_TIME: cumulative time spent in read, write, or metadata operations.
+#   POSIX_F_MAX_*_TIME: duration of the slowest read and write operations.
+#   POSIX_F_*_RANK_TIME: fastest and slowest I/O time for a single rank (for shared files).
+#   POSIX_F_VARIANCE_RANK_*: variance of total I/O time and bytes moved for all ranks (for shared files).
+
+# WARNING: POSIX_OPENS counter includes both POSIX_FILENOS and POSIX_DUPS counts
+
+# WARNING: POSIX counters related to file offsets may be incorrect if a file is simultaneously accessed by both POSIX and STDIO (e.g., using fileno())
+# 	- Affected counters include: MAX_BYTE_{READ|WRITTEN}, CONSEC_{READS|WRITES}, SEQ_{READS|WRITES}, {MEM|FILE}_NOT_ALIGNED, STRIDE*_STRIDE
+
+#<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
+POSIX	0	5693969762425603550	POSIX_OPENS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FILENOS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_DUPS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_READS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_WRITES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SEEKS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STATS	1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MMAPS	-1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FSYNCS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FDSYNCS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_RENAME_SOURCES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_RENAME_TARGETS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_RENAMED_FROM	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MODE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_BYTES_READ	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_BYTES_WRITTEN	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MAX_BYTE_READ	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MAX_BYTE_WRITTEN	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_CONSEC_READS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_CONSEC_WRITES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SEQ_READS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SEQ_WRITES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_RW_SWITCHES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MEM_NOT_ALIGNED	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MEM_ALIGNMENT	8	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FILE_NOT_ALIGNED	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FILE_ALIGNMENT	1048576	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MAX_READ_TIME_SIZE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_MAX_WRITE_TIME_SIZE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_0_100	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_100_1K	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_1K_10K	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_10K_100K	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_100K_1M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_1M_4M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_4M_10M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_10M_100M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_100M_1G	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_READ_1G_PLUS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_0_100	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_100_1K	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_1K_10K	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_10K_100K	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_100K_1M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_1M_4M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_4M_10M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_10M_100M	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_100M_1G	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SIZE_WRITE_1G_PLUS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE1_STRIDE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE2_STRIDE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE3_STRIDE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE4_STRIDE	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE1_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE2_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE3_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_STRIDE4_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS1_ACCESS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS2_ACCESS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS3_ACCESS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS4_ACCESS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS1_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS2_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS3_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_ACCESS4_COUNT	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FASTEST_RANK	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SLOWEST_RANK	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_OPEN_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_READ_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_WRITE_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_CLOSE_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_OPEN_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_READ_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_WRITE_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_CLOSE_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_READ_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_WRITE_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_META_TIME	0.000026	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_MAX_READ_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_MAX_WRITE_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	5693969762425603550	POSIX_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_OPENS	1	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FILENOS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_DUPS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SEEKS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STATS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MMAPS	-1	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FDSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_RENAME_SOURCES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_RENAME_TARGETS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_RENAMED_FROM	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MODE	256	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_BYTES_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_BYTES_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MAX_BYTE_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MAX_BYTE_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_CONSEC_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_CONSEC_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SEQ_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SEQ_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_RW_SWITCHES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MEM_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MEM_ALIGNMENT	8	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FILE_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FILE_ALIGNMENT	4096	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MAX_READ_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_MAX_WRITE_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_READ_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SIZE_WRITE_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE1_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE2_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE3_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE4_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_STRIDE4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS1_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS2_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS3_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS4_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_ACCESS4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FASTEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_FASTEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SLOWEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_SLOWEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_OPEN_START_TIMESTAMP	0.027054	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_READ_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_WRITE_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_CLOSE_START_TIMESTAMP	0.027128	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_OPEN_END_TIMESTAMP	0.027087	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_READ_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_WRITE_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_CLOSE_END_TIMESTAMP	0.027132	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_META_TIME	0.000036	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_MAX_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_MAX_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_FASTEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_SLOWEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_VARIANCE_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	0	211138920825354937	POSIX_F_VARIANCE_RANK_BYTES	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/0/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_OPENS	1	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FILENOS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_DUPS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SEEKS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STATS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MMAPS	-1	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FDSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_RENAME_SOURCES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_RENAME_TARGETS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_RENAMED_FROM	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MODE	256	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_BYTES_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_BYTES_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MAX_BYTE_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MAX_BYTE_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_CONSEC_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_CONSEC_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SEQ_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SEQ_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_RW_SWITCHES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MEM_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MEM_ALIGNMENT	8	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FILE_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FILE_ALIGNMENT	4096	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MAX_READ_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_MAX_WRITE_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_READ_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SIZE_WRITE_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE1_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE2_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE3_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE4_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_STRIDE4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS1_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS2_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS3_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS4_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_ACCESS4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FASTEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_FASTEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SLOWEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_SLOWEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_OPEN_START_TIMESTAMP	0.024885	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_READ_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_WRITE_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_CLOSE_START_TIMESTAMP	0.024945	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_OPEN_END_TIMESTAMP	0.024921	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_READ_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_WRITE_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_CLOSE_END_TIMESTAMP	0.024947	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_META_TIME	0.000038	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_MAX_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_MAX_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_FASTEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_SLOWEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_VARIANCE_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	1	18220973418023637043	POSIX_F_VARIANCE_RANK_BYTES	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/1/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_OPENS	1	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FILENOS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_DUPS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SEEKS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STATS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MMAPS	-1	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FDSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_RENAME_SOURCES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_RENAME_TARGETS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_RENAMED_FROM	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MODE	256	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_BYTES_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_BYTES_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MAX_BYTE_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MAX_BYTE_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_CONSEC_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_CONSEC_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SEQ_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SEQ_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_RW_SWITCHES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MEM_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MEM_ALIGNMENT	8	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FILE_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FILE_ALIGNMENT	4096	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MAX_READ_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_MAX_WRITE_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_READ_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SIZE_WRITE_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE1_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE2_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE3_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE4_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_STRIDE4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS1_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS2_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS3_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS4_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_ACCESS4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FASTEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_FASTEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SLOWEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_SLOWEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_OPEN_START_TIMESTAMP	0.024801	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_READ_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_WRITE_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_CLOSE_START_TIMESTAMP	0.024868	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_OPEN_END_TIMESTAMP	0.024843	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_READ_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_WRITE_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_CLOSE_END_TIMESTAMP	0.024870	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_META_TIME	0.000044	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_MAX_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_MAX_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_FASTEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_SLOWEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_VARIANCE_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	2	16249546920507725654	POSIX_F_VARIANCE_RANK_BYTES	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/2/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_OPENS	1	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FILENOS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_DUPS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SEEKS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STATS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MMAPS	-1	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FDSYNCS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_RENAME_SOURCES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_RENAME_TARGETS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_RENAMED_FROM	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MODE	256	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_BYTES_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_BYTES_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MAX_BYTE_READ	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MAX_BYTE_WRITTEN	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_CONSEC_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_CONSEC_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SEQ_READS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SEQ_WRITES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_RW_SWITCHES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MEM_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MEM_ALIGNMENT	8	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FILE_NOT_ALIGNED	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FILE_ALIGNMENT	4096	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MAX_READ_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_MAX_WRITE_TIME_SIZE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_READ_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_0_100	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_100_1K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_1K_10K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_10K_100K	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_100K_1M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_1M_4M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_4M_10M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_10M_100M	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_100M_1G	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SIZE_WRITE_1G_PLUS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE1_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE2_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE3_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE4_STRIDE	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_STRIDE4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS1_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS2_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS3_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS4_ACCESS	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS1_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS2_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS3_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_ACCESS4_COUNT	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FASTEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_FASTEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SLOWEST_RANK	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_SLOWEST_RANK_BYTES	0	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_OPEN_START_TIMESTAMP	0.024655	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_READ_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_WRITE_START_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_CLOSE_START_TIMESTAMP	0.024722	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_OPEN_END_TIMESTAMP	0.024698	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_READ_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_WRITE_END_TIMESTAMP	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_CLOSE_END_TIMESTAMP	0.024724	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_META_TIME	0.000045	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_MAX_READ_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_MAX_WRITE_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_FASTEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_SLOWEST_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_VARIANCE_RANK_TIME	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+POSIX	3	2118752916234662043	POSIX_F_VARIANCE_RANK_BYTES	0.000000	/tmp/openmpi-sessions-root@lab3_0/469/1/3/aborted	UNKNOWN	UNKNOWN
+
+# *******************************************************
+# LUSTRE module data
+# *******************************************************
+
+# description of LUSTRE counters:
+#   LUSTRE_OSTS: number of OSTs across the entire file system.
+#   LUSTRE_MDTS: number of MDTs across the entire file system.
+#   LUSTRE_STRIPE_OFFSET: OST ID offset specified when the file was created.
+#   LUSTRE_STRIPE_SIZE: stripe size for file in bytes.
+#   LUSTRE_STRIPE_WIDTH: number of OSTs over which the file is striped.
+#   LUSTRE_OST_ID_*: indices of OSTs over which the file is striped.
+
+#<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
+LUSTRE	0	1295546883726824018	LUSTRE_OSTS	6	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	1295546883726824018	LUSTRE_MDTS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	1295546883726824018	LUSTRE_STRIPE_OFFSET	-1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	1295546883726824018	LUSTRE_STRIPE_SIZE	1048576	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	1295546883726824018	LUSTRE_STRIPE_WIDTH	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	1295546883726824018	LUSTRE_OST_ID_0	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	5693969762425603550	LUSTRE_OSTS	6	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	5693969762425603550	LUSTRE_MDTS	1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	5693969762425603550	LUSTRE_STRIPE_OFFSET	-1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	5693969762425603550	LUSTRE_STRIPE_SIZE	1048576	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	5693969762425603550	LUSTRE_STRIPE_WIDTH	1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	5693969762425603550	LUSTRE_OST_ID_0	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11134452580698991278	LUSTRE_OSTS	6	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11134452580698991278	LUSTRE_MDTS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11134452580698991278	LUSTRE_STRIPE_OFFSET	-1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11134452580698991278	LUSTRE_STRIPE_SIZE	1048576	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11134452580698991278	LUSTRE_STRIPE_WIDTH	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11134452580698991278	LUSTRE_OST_ID_0	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	11976926180262752664	LUSTRE_OSTS	6	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	11976926180262752664	LUSTRE_MDTS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	11976926180262752664	LUSTRE_STRIPE_OFFSET	-1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	11976926180262752664	LUSTRE_STRIPE_SIZE	1048576	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	11976926180262752664	LUSTRE_STRIPE_WIDTH	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	11976926180262752664	LUSTRE_OST_ID_0	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16165191702840974513	LUSTRE_OSTS	6	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16165191702840974513	LUSTRE_MDTS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16165191702840974513	LUSTRE_STRIPE_OFFSET	-1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16165191702840974513	LUSTRE_STRIPE_SIZE	1048576	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16165191702840974513	LUSTRE_STRIPE_WIDTH	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16165191702840974513	LUSTRE_OST_ID_0	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+LUSTRE	0	16405230935864250328	LUSTRE_OSTS	6	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	16405230935864250328	LUSTRE_MDTS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	16405230935864250328	LUSTRE_STRIPE_OFFSET	-1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	16405230935864250328	LUSTRE_STRIPE_SIZE	1048576	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	16405230935864250328	LUSTRE_STRIPE_WIDTH	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+LUSTRE	0	16405230935864250328	LUSTRE_OST_ID_0	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+
+# *******************************************************
+# STDIO module data
+# *******************************************************
+
+# description of STDIO counters:
+#   STDIO_{OPENS|FDOPENS|WRITES|READS|SEEKS|FLUSHES} are types of operations.
+#   STDIO_BYTES_*: total bytes read and written.
+#   STDIO_MAX_BYTE_*: highest offset byte read and written.
+#   STDIO_*_RANK: rank of the processes that were the fastest and slowest at I/O (for shared files).
+#   STDIO_*_RANK_BYTES: bytes transferred by the fastest and slowest ranks (for shared files).
+#   STDIO_F_*_START_TIMESTAMP: timestamp of the first call to that type of function.
+#   STDIO_F_*_END_TIMESTAMP: timestamp of the completion of the last call to that type of function.
+#   STDIO_F_*_TIME: cumulative time spent in different types of functions.
+#   STDIO_F_*_RANK_TIME: fastest and slowest I/O time for a single rank (for shared files).
+#   STDIO_F_VARIANCE_RANK_*: variance of total I/O time and bytes moved for all ranks (for shared files).
+
+# WARNING: STDIO_OPENS counter includes STDIO_FDOPENS count
+
+# WARNING: STDIO counters related to file offsets may be incorrect if a file is simultaneously accessed by both STDIO and POSIX (e.g., using fdopen())
+# 	- Affected counters include: MAX_BYTE_{READ|WRITTEN}
+
+#<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
+STDIO	0	1295546883726824018	STDIO_OPENS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_FDOPENS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_READS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_WRITES	41	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_SEEKS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_FLUSHES	15	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_BYTES_WRITTEN	1932	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_BYTES_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_MAX_BYTE_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_MAX_BYTE_WRITTEN	1931	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_FASTEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_SLOWEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_META_TIME	0.000513	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_WRITE_TIME	0.002214	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_READ_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_OPEN_START_TIMESTAMP	0.010263	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_CLOSE_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_WRITE_START_TIMESTAMP	0.010880	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_READ_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_OPEN_END_TIMESTAMP	0.010777	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_CLOSE_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_WRITE_END_TIMESTAMP	0.024384	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_READ_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	1295546883726824018	STDIO_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result.txt	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_OPENS	1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_FDOPENS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_READS	1	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_WRITES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_SEEKS	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_FLUSHES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_BYTES_WRITTEN	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_BYTES_READ	2253	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_MAX_BYTE_READ	2252	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_MAX_BYTE_WRITTEN	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_FASTEST_RANK	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_SLOWEST_RANK	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_META_TIME	0.001070	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_WRITE_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_READ_TIME	0.000105	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_OPEN_START_TIMESTAMP	0.004148	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_CLOSE_START_TIMESTAMP	0.005251	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_WRITE_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_READ_START_TIMESTAMP	0.005132	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_OPEN_END_TIMESTAMP	0.004854	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_CLOSE_END_TIMESTAMP	0.005615	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_WRITE_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_READ_END_TIMESTAMP	0.005237	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	5693969762425603550	STDIO_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/Trace_Dataset/mdtest-easy/mdtest-easy_api_MPIIO_n_100000__0.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_OPENS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_FDOPENS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_READS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_WRITES	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_SEEKS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_FLUSHES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_BYTES_WRITTEN	2253	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_BYTES_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_MAX_BYTE_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_MAX_BYTE_WRITTEN	2252	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_FASTEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_SLOWEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_META_TIME	0.001827	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_WRITE_TIME	0.000617	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_READ_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_OPEN_START_TIMESTAMP	0.012988	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_CLOSE_START_TIMESTAMP	0.014233	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_WRITE_START_TIMESTAMP	0.013615	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_READ_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_OPEN_END_TIMESTAMP	0.013540	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_CLOSE_END_TIMESTAMP	0.015508	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_WRITE_END_TIMESTAMP	0.014231	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_READ_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11134452580698991278	STDIO_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config-orig.ini	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_OPENS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_FDOPENS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_READS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_WRITES	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_SEEKS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_FLUSHES	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_BYTES_WRITTEN	55	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_BYTES_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_MAX_BYTE_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_MAX_BYTE_WRITTEN	54	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_FASTEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_SLOWEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_META_TIME	0.000534	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_WRITE_TIME	0.001803	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_READ_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_OPEN_START_TIMESTAMP	0.024386	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_CLOSE_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_WRITE_START_TIMESTAMP	0.025045	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_READ_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_OPEN_END_TIMESTAMP	0.024920	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_CLOSE_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_WRITE_END_TIMESTAMP	0.026851	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_READ_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	11976926180262752664	STDIO_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/mdtest-easy-write.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_OPENS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_FDOPENS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_READS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_WRITES	5	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_SEEKS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_FLUSHES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_BYTES_WRITTEN	206	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_BYTES_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_MAX_BYTE_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_MAX_BYTE_WRITTEN	205	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_FASTEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_SLOWEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_META_TIME	0.000916	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_WRITE_TIME	0.000621	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_READ_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_OPEN_START_TIMESTAMP	0.009256	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_CLOSE_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_WRITE_START_TIMESTAMP	0.018621	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_READ_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_OPEN_END_TIMESTAMP	0.010171	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_CLOSE_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_WRITE_END_TIMESTAMP	0.024293	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_READ_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16165191702840974513	STDIO_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/result_summary.txt	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_OPENS	1	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_FDOPENS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_READS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_WRITES	169	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_SEEKS	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_FLUSHES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_BYTES_WRITTEN	2253	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_BYTES_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_MAX_BYTE_READ	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_MAX_BYTE_WRITTEN	2252	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_FASTEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_FASTEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_SLOWEST_RANK	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_SLOWEST_RANK_BYTES	0	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_META_TIME	0.001997	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_WRITE_TIME	0.000734	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_READ_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_OPEN_START_TIMESTAMP	0.015587	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_CLOSE_START_TIMESTAMP	0.016979	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_WRITE_START_TIMESTAMP	0.016161	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_READ_START_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_OPEN_END_TIMESTAMP	0.016114	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_CLOSE_END_TIMESTAMP	0.018449	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_WRITE_END_TIMESTAMP	0.016979	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_READ_END_TIMESTAMP	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_FASTEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_SLOWEST_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_VARIANCE_RANK_TIME	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	0	16405230935864250328	STDIO_F_VARIANCE_RANK_BYTES	0.000000	/mnt/IOLustre/io500/results_0/2024.09.09-23.13.32/config.ini	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_OPENS	4	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FDOPENS	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_READS	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_WRITES	14	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_SEEKS	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FLUSHES	3	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_BYTES_WRITTEN	647	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_BYTES_READ	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_MAX_BYTE_READ	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_MAX_BYTE_WRITTEN	481	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FASTEST_RANK	2	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FASTEST_RANK_BYTES	55	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_SLOWEST_RANK	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_SLOWEST_RANK_BYTES	482	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_META_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_TIME	0.000213	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_READ_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_OPEN_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_CLOSE_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_START_TIMESTAMP	0.019240	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_READ_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_OPEN_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_CLOSE_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_END_TIMESTAMP	0.024757	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_READ_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_FASTEST_RANK_TIME	0.000026	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_SLOWEST_RANK_TIME	0.000126	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_VARIANCE_RANK_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_VARIANCE_RANK_BYTES	34186.687500	<STDOUT>	UNKNOWN	UNKNOWN
+
+# *******************************************************
+# HEATMAP module data
+# *******************************************************
+
+# description of heatmap counters:
+#   HEATMAP_F_BIN_WIDTH_SECONDS: time duration of each heatmap bin
+#   HEATMAP_{READ|WRITE}_BIN_{*}: number of bytes read or written within specified heatmap bin
+
+#<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
+HEATMAP	0	3989511027826779520	HEATMAP_F_BIN_WIDTH_SECONDS	0.100000	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	0	3989511027826779520	HEATMAP_READ_BIN_0	2253	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	0	3989511027826779520	HEATMAP_WRITE_BIN_0	7181	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	1	3989511027826779520	HEATMAP_F_BIN_WIDTH_SECONDS	0.100000	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	1	3989511027826779520	HEATMAP_READ_BIN_0	0	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	1	3989511027826779520	HEATMAP_WRITE_BIN_0	55	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	2	3989511027826779520	HEATMAP_F_BIN_WIDTH_SECONDS	0.100000	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	2	3989511027826779520	HEATMAP_READ_BIN_0	0	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	2	3989511027826779520	HEATMAP_WRITE_BIN_0	55	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	3	3989511027826779520	HEATMAP_F_BIN_WIDTH_SECONDS	0.100000	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	3	3989511027826779520	HEATMAP_READ_BIN_0	0	heatmap:STDIO	UNKNOWN	UNKNOWN
+HEATMAP	3	3989511027826779520	HEATMAP_WRITE_BIN_0	55	heatmap:STDIO	UNKNOWN	UNKNOWN
